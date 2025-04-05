@@ -12,7 +12,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+        <q-item-label header> Nursery rhymes </q-item-label>
 
         <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
       </q-list>
@@ -30,34 +30,24 @@ import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink
 
 const linksList: EssentialLinkProps[] = [
   {
+    title: 'Главная',
+    icon: 'home',
+    link: '/#/',
+  },
+  {
     title: 'Потешки',
-    caption: 'quasar.dev',
-    icon: 'school',
+    icon: 'child_care',
     link: '/#/nursery-rhymes/',
   },
   {
     title: 'Засыпайки',
-    caption: 'quasar.dev',
-    icon: 'school',
+    icon: 'bedtime',
     link: '#/sleepers/',
   },
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev',
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Dev',
     icon: 'code',
-    link: 'https://github.com/quasarframework',
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
+    link: '#/dev/',
   },
 ];
 
