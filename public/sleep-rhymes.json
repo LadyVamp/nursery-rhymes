@@ -1,0 +1,21 @@
+{
+  "rhymes": [
+    {
+      "id": "id1",
+      "title": "title1",
+      "content": "content1",
+      "author": "author1"
+    },
+    {
+      "id": "id2",
+      "title": "title2",
+      "content": "content2",
+      "author": "author2"
+    },
+    {
+      "id": "id3",
+      "title": "title3",
+      "content": "content3"
+    }
+  ]
+}
