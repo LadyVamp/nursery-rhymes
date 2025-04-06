@@ -3,7 +3,7 @@
     SleepRhymesView!!!
     <div v-if="!isLoading">
       <div v-for="item in rhymes" :key="item.id" class="col-md-4 col-xl-3 col-xs-12">
-        <q-card class="my-card">
+        <q-card class="q-my-sm">
           <q-card-section>
             <router-link
               :to="{

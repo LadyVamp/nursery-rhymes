@@ -64,12 +64,12 @@ const menuList = [
     to: '/',
   },
   {
-    icon: 'mdi-lightbulb-outline',
+    icon: 'mdi-baby-face-outline',
     label: 'Потешки',
     to: '/cheery-rhymes',
   },
   {
-    icon: 'mdi-lightbulb-outline',
+    icon: 'mdi-weather-night',
     label: 'Засыпайки',
     to: '/sleep-rhymes',
   },
