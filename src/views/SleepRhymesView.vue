@@ -1,6 +1,6 @@
 <template>
   <div>
-    SleepRhymesView!!!
+    <h2>Засыпайки</h2>
     <div v-if="!isLoading">
       <div v-for="item in rhymes" :key="item.id" class="col-md-4 col-xl-3 col-xs-12">
         <q-card class="q-my-sm">
@@ -38,7 +38,6 @@ function loadItems() {
   isLoading.value = true;
   getAllSleepRhymes()
     .then((res: RhymesResponse) => {
-      console.log(res);
       rhymes = res.rhymes;
     })
     .catch((err) => console.error(err))

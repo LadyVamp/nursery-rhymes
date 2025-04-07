@@ -1,9 +1,10 @@
 <template>
-  <div>
-    RhymeDetails!!!
-    <div v-if="!isLoading">
-      {{ currentRhyme }}
-    </div>
+  <div v-if="!isLoading">
+    <h2>{{ currentRhyme.title }}</h2>
+    <b>{{ currentRhyme.author }}</b>
+    <p class="pre-wrap q-my-sm">
+      {{ currentRhyme.content }}
+    </p>
   </div>
 </template>
 
@@ -14,7 +15,11 @@ import { getAllSleepRhymes } from '@/api/rhymes';
 import { RhymesResponse, Rhyme } from '@/api/interfaces';
 
 const route = useRoute();
-let currentRhyme: Rhyme = {};
+let currentRhyme: Rhyme = {
+  id: '',
+  title: '',
+  content: '',
+};
 const isLoading = ref(false);
 
 onMounted(() => {
@@ -25,10 +30,8 @@ function loadItems() {
   isLoading.value = true;
   getAllSleepRhymes()
     .then((res: RhymesResponse) => {
-      console.log(res);
       currentRhyme = res.rhymes.filter((item) => item.id === route.params.id)[0];
       document.title = `${currentRhyme.title}`;
-      console.log(currentRhyme);
     })
     .catch((err) => console.error(err))
     .finally(() => (isLoading.value = false));
@@ -36,10 +39,7 @@ function loadItems() {
 </script>
 
 <style scoped>
-.q-select {
-  margin: 0 10px;
-}
-.border-gray:before {
-  border: 1px solid lightgray;
+.pre-wrap {
+  white-space: pre-wrap;
 }
 </style>
