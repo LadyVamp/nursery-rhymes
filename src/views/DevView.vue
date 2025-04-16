@@ -1,6 +1,10 @@
 <template>
   <section>
     <div class="q-pa-md">
+      <h2>Кириллица в транслит для id</h2>
+      <CyrillicTransliterator />
+    </div>
+    <div class="q-pa-md">
       <q-btn
         color="orange"
         label="Иконки"
@@ -26,4 +30,6 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import CyrillicTransliterator from '@/components/Shared/CyrillicTransliterator.vue';
+</script>

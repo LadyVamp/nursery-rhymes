@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2>Потешки</h2>
+    <div class="flex justify-end">
+      <WakelockButton />
+    </div>
     <div v-if="!isLoading">
       <div v-for="item in rhymes" :key="item.title" class="pre-wrap">
         <b> {{ item.title }}</b>
@@ -16,6 +19,7 @@
 import { ref, onMounted } from 'vue';
 import { getAllCheeryRhymes } from '@/api/rhymes';
 import { RhymesResponse, Rhyme } from '@/api/interfaces';
+import WakelockButton from '@/components/Shared/WakelockButton.vue';
 
 const isLoading = ref(false);
 let rhymes: Rhyme[] = [];
