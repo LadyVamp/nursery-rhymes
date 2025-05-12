@@ -69,6 +69,11 @@ const menuList = [
     to: '/cheery-rhymes',
   },
   {
+    icon: 'mdi-bowl-mix-outline',
+    label: 'Потешки для кормления',
+    to: '/feed-rhymes',
+  },
+  {
     icon: 'mdi-weather-night',
     label: 'Засыпайки',
     to: '/sleep-rhymes',

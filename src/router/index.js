@@ -19,6 +19,14 @@ const routes = [
     },
   },
   {
+    path: '/feed-rhymes',
+    name: 'FeedRhymes',
+    component: () => import('@/views/FeedRhymesView.vue'),
+    meta: {
+      title: 'Потешки для кормления',
+    },
+  },
+  {
     path: '/sleep-rhymes',
     name: 'SleepRhymes',
     component: () => import('@/views/SleepRhymesView.vue'),
